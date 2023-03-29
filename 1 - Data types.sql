@@ -1,7 +1,3 @@
-CREATE DATABASE db_Treinamento_TSQL
-
-
-
 ------------------------------------------------------------------------------------------------------------------------------
 -- CRIAÇÃO DO DATABASE
 ------------------------------------------------------------------------------------------------------------------------------
@@ -11,8 +7,6 @@ CREATE DATABASE db_estudo
 -- CRIANDO DOIS TIPOS DE DADOS ÚNICOS (CPF E CEP)
 CREATE TYPE [dbo].[CPF] FROM CHAR (11)
 CREATE TYPE [dbo].[CEP] FROM CHAR (8)
-
-
 
 -- CRIANDO A TABELA
 CREATE TABLE curso
@@ -64,7 +58,6 @@ SET @var_estudo =  DATEDIFF(DAY, GETDATE(),   1998-04-29)
 
 SELECT @var_estudo;
 
-
 ------------------------------------------------------------------------------------------------------------------------------
 -- CHAR / VARCHAR (1 BYTE POR CARACTER - TABELA ASCII)
 -- NCHAR / NVARCHAR (2 BYTES POR CARACTER - TABELA UNICODE)
@@ -115,7 +108,6 @@ CREATE TABLE TESTE_STRING_NCHAR (
 	FI_SEXO_NCHAR NCHAR (3) NOT NULL
 )
 
-
 --- INICIO TABELA INT PARA COMPARAÇÃO 
 DROP TABLE IF EXISTS TESTE_INTEIRO_INT
 
@@ -149,8 +141,6 @@ SET NOCOUNT OFF
 EXEC sp_spaceused 'TESTE_STRING_CHAR' 
 EXEC sp_spaceused 'TESTE_STRING_NCHAR'
 EXEC sp_spaceused 'TESTE_INTEIRO_BIT'
-
-
 
 ------------------------------------------------------------------------------------------------------------------------------
 -- DATE (1 BYTE POR CARACTER - TABELA ASCII)
@@ -201,7 +191,6 @@ DECLARE @var_DATE DATE
 SELECT @var_DATE = '20-02-2022'
 
 SELECT @var_DATE
-
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 -- DADOS NUMÉRICOS 
@@ -535,8 +524,6 @@ SELECT 'ADM DE BD - ' + @var_Teste4
 SELECT 'ADM DE BD - ' + ISNULL(@var_Teste4, '')
 
 GO
-
-
 
 -- VARIAVEIS x MULTIPLOS VALORES
 -- EXEMPLO: 01

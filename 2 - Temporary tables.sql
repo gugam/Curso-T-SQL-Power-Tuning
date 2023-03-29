@@ -287,7 +287,6 @@ VALUES ('Luiz Gustavo', '19980429', 1),
 SELECT * FROM @Cliente
 
 GO
-
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- DESAFIO 1 - VARIÁVEIS
 --ROLLBACK não funciona em variáveis. Neste caso, deveria desfazer a multiplicação
